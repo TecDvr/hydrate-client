@@ -10,7 +10,7 @@ export default class Register extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     fetch('http://localhost:8000/api/user', {
-      method: 'GET',
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
