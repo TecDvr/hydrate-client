@@ -4,6 +4,9 @@ export default class Register extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      username: '',
+      password: '',
+      glasses: 0
     }
   }
 
@@ -14,12 +17,12 @@ export default class Register extends React.Component {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({})
+      body: JSON.stringify(this.state) 
     })
-      .then(response => response.json())
-      .then(responseJSON => {
-        console.log(responseJSON)
-      })
+    .then(response => response.json())
+    .then(responseJSON => {
+      this.props.history.push('/login');
+    })
   }
 
   render() {
@@ -37,7 +40,8 @@ export default class Register extends React.Component {
               required
               name='username'
               id='username'
-              placeholder='demoUser'>
+              placeholder='demoUser'
+              onChange={e=>this.setState({username:e.target.value})}>
             </input>
             <label htmlFor='password'>
               Password
@@ -46,7 +50,8 @@ export default class Register extends React.Component {
               required
               name='password'
               id='password'
-              placeholder='demoPassword'>
+              placeholder='demoPassword'
+              onChange={e=>this.setState({password:e.target.value})}>
             </input>
             <label htmlFor='water_goal'>
               Water Goal
@@ -55,7 +60,8 @@ export default class Register extends React.Component {
               required
               name='uwater_goal'
               id='water_goal'
-              placeholder='8'>
+              placeholder='8'
+              onChange={e=>this.setState({glasses:e.target.value})}>
             </input>
           </div>
           <button type='submit'>Create User</button>

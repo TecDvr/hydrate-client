@@ -31,7 +31,6 @@ export default class Learn extends React.Component {
                     <p>{this.state.response.id}</p>
                     <p>{this.state.response.fact}</p>
 
-
                     <Route
                         exact
                         path='/learn'

@@ -6,6 +6,7 @@ import Learn from './components/learn/learn';
 import Login from './components/login/login';
 import Register from './components/register/register';
 import Menu from './components/menu/menu';
+import UI from './components/ui/ui';
 
 export default class App extends React.Component {
   render() {
@@ -15,36 +16,44 @@ export default class App extends React.Component {
           <Menu />
         </header>
         
+        <main>
+          <Route 
+            exact 
+            path='/' 
+            component={Landing}
+          />
 
-        <Route 
-          exact 
-          path='/' 
-          component={Landing}
-        />
+          <Route  
+            exact 
+            path='/learn' 
+            component={Learn}
+          />
 
-        <Route  
-          exact 
-          path='/learn' 
-          component={Learn}
-        />
+          <Route 
+            exact 
+            path='/learntwo' 
+            component={Learn}
+          />
 
-        <Route 
-          exact 
-          path='/learntwo' 
-          component={Learn}
-        />
+          <Route 
+            exact 
+            path='/login' 
+            component={Login}
+          />
 
-        <Route 
-          exact 
-          path='/login' 
-          component={Login}
-        />
+          <Route 
+            exact
+            path='/user'
+            component={Register}
+          />
 
-        <Route 
-          exact
-          path='/user'
-          component={Register}
-        />
+          <Route
+            exact
+            path='/ui'
+            component={UI}
+          />
+        </main>
+        
 
       </div>
     )
