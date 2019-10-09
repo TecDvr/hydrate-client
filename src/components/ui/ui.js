@@ -1,5 +1,6 @@
 import React from 'react';
-import ChartGauge from '../chart/chart'
+import GaugeWeek from '../chart/gauge-week'
+import GaugeDay from '../chart/gauge-day';
 
 export default class UI extends React.Component {
   constructor(props) {
@@ -52,7 +53,8 @@ export default class UI extends React.Component {
   render() {
     return (
       <div className='userInterface'>
-        <ChartGauge />
+        <GaugeDay />
+        <GaugeWeek />
         <h1>Test UI</h1>
         <div>
           <p>graph</p>

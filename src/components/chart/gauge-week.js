@@ -1,7 +1,7 @@
 import React from 'react'
 import Chart from 'react-google-charts';
 
-export default class ChartGauge extends React.Component {
+export default class GaugeWeek extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -19,7 +19,6 @@ export default class ChartGauge extends React.Component {
                 loader={<div>Loading Chart</div>}
                 data={[
                     ['Label', 'Value'],
-                    ['Today', this.state.today],
                     ['Week', this.state.week],
                 ]}
                 options={{
@@ -28,8 +27,8 @@ export default class ChartGauge extends React.Component {
                     yellowFrom: 75,
                     yellowTo: 90,
                     minorTicks: 10,
+                    max: 56
                 }}
-                rootProps={{ 'data-testid': '1' }}
             />
         )
       
