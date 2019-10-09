@@ -1,31 +1,12 @@
 import React from 'react';
+import ChartGauge from '../chart/chart'
 
 export default class UI extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      amount: 0
+      amount: null
     }
-  }
-
-  addWater() {
-    fetch('http://localhost:8000/api/user/waterconsumed/1', {
-      method: 'PATCH',
-      headers: {
-        'Content-Type': 'application/json',
-        'authorization': `basic ${window.localStorage.getItem('zachs-token-son')}`
-      },
-      body: JSON.stringify(this.state) 
-    })
-  }
-
-  addWaterClick() {
-    let newCount = this.state.amount.amount
-    this.setState({
-      amount: newCount + 1
-    })
-    console.log(this.state.amount);
-    this.addWater();
   }
 
   componentDidMount() {
@@ -42,22 +23,43 @@ export default class UI extends React.Component {
     )
       .then(amount => {
         this.setState({
-          amount
+          amount: amount.amount
         })
         console.log(this.state.amount)
       })
   }
 
+  addWater() {
+    fetch('http://localhost:8000/api/user/waterconsumed/1', { // user_id!
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+        'authorization': `basic ${window.localStorage.getItem('zachs-token-son')}`
+      },
+      body: JSON.stringify(this.state)
+    })
+  }
+
+  addWaterClick() {
+    let newCount = this.state.amount
+    this.setState({
+      amount: newCount + 1
+    })
+    console.log(this.state.amount);
+    this.addWater();
+  }
+
   render() {
     return (
       <div className='userInterface'>
+        <ChartGauge />
         <h1>Test UI</h1>
         <div>
           <p>graph</p>
         </div>
         <div className='waterGoal'>
           <p>Your Goal:</p>
-          <p>Glasses Consumed: {this.state.amount.amount}</p>
+          <p>Glasses Consumed: {this.state.amount}</p>
         </div>
         <button onClick={() => this.addWaterClick()}>Add Water</button>
       </div>
