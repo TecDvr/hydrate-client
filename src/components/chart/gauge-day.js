@@ -1,33 +1,28 @@
-import React from 'react'
+import React from 'react';
 import Chart from 'react-google-charts';
+import HydrateContext from '../../context/hydrate-context';
 
 export default class GaugeDay extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            today: 6,
-            week: 48
-        }
-    }
+    static contextType = HydrateContext;
 
     render() {
         return (
             <Chart
-                width={400}
-                height={120}
+                width={150}
+                height={150}
                 chartType="Gauge"
                 loader={<div>Loading Chart</div>}
                 data={[
                     ['Label', 'Value'],
-                    ['Today', this.state.today],
+                    ['Today', this.context.amount],
                 ]}
                 options={{
                     redFrom: 90,
                     redTo: 100,
                     yellowFrom: 75,
                     yellowTo: 90,
-                    minorTicks: 10,
-                    max: 8
+                    minorTicks: 2,
+                    max: this.context.goal
                 }}
             />
         )

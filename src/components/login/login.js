@@ -22,9 +22,12 @@ export default class Login extends React.Component {
       body: JSON.stringify(this.state) 
     })
     .then(res =>
-      (!res.ok)
-        ? res.json().then(e => Promise.reject(e))
-        : this.props.history.push('/ui')
+      (res.ok)
+        ? res.json().then(user => {
+          window.localStorage.setItem('userID',user.id)
+          this.props.history.push('/ui')
+        })
+        : Promise.reject(res)
     )
   }
 

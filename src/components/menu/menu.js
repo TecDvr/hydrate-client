@@ -9,7 +9,8 @@ export default class Menu extends React.Component {
           <div>
             <Link
               onClick={() => {
-                window.localStorage.removeItem('zachs-token-son')
+                window.localStorage.removeItem('zachs-token-son');
+                window.localStorage.removeItem('userID');
               }}
               to='/'>
               Logout

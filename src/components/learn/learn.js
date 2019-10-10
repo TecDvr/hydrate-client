@@ -16,7 +16,6 @@ export default class Learn extends React.Component {
                 this.setState({
                     response
                 })
-                console.log(this.state.response);
             })
             .catch(e => {
                 console.error({e})
