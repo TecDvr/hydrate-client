@@ -90,9 +90,9 @@ export default class UI extends React.Component {
             <GaugeDay />
           </div>
           <div className='weekGoalMet'>
-            {this.state.week.map(weeks => {
+            {this.state.week.map((weeks, index) => {
               return (
-                <div>
+                <div key={index}>
                   <p>You drank {weeks.amount} glasses on {weeks.date.slice(0, 10)}</p>
                 </div>
               )
