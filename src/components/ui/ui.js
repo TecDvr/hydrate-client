@@ -85,7 +85,7 @@ export default class UI extends React.Component {
     return (
       <HydrateContext.Provider value={this.state}>
         <div className='userInterface'>
-          <h1>Test UI</h1>
+          <h1 className='uiTitle'>Water Consumed</h1>
           <div className='gauges'>
             <GaugeDay />
           </div>
@@ -99,11 +99,11 @@ export default class UI extends React.Component {
             })}
           </div>
           <div className='waterGoal'>
-            <p>Your Goal: {this.state.goal}</p>
-            <p>Glasses Consumed: {this.state.amount}</p>
+            <p className='goalText'>Your Goal: {this.state.goal}</p>
+            <p className='goalText'>Glasses Consumed: {this.state.amount}</p>
           </div>
-          <button onClick={() => this.addWaterClick()}>Add Water</button>
-          <button onClick={() => this.subtractWaterClick()}>Subtract Water</button>
+          <button className='uiButtons' onClick={() => this.addWaterClick()}>Add Water</button>
+          <button className='uiButtons' onClick={() => this.subtractWaterClick()}>Subtract Water</button>
         </div>
       </HydrateContext.Provider>
     )

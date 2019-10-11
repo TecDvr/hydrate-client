@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './login.css';
 
 export default class Login extends React.Component {
   constructor(props) {
@@ -36,34 +37,30 @@ export default class Login extends React.Component {
       <div className='loginPage'>
         <div>
           <header className='loginHeader'>
-            <h1>Login</h1>
+            <h1 className='loginTitle'>Login</h1>
           </header>
           <form className='loginForm' onSubmit={e => this.handleSubmit(e)}>
-            <div className='usernameInput'>
-              <label htmlFor='username'>
-                Username
-              </label>
+            <div>
               <input 
+                className='loginInput'
                 required
                 name='user_name'
                 id='username'
-                placeholder='ex. demoUser'
+                placeholder='Username'
                 onChange={e=>this.setState({username:e.target.value})}>
               </input>
             </div>
-            <div className='passwordInput'>
-              <label htmlFor='password'>
-                Password
-              </label>
+            <div>
               <input
+                className='loginInput'
                 required
                 name='password'
                 id='password'
-                placeholder='demoPassword12!'
+                placeholder='Password'
                 onChange={e=>this.setState({password:e.target.value})}>
               </input>
             </div>
-            <button type='submit'>Login</button>
+            <button className='loginButtons'            type='submit'>Submit</button>
           </form>
         </div>
       </div>

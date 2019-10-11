@@ -8,21 +8,22 @@ export default class Landing extends React.Component {
             <div className='landingPage'>
                 <header>
                     <div className='title'>
-                        <h1>hydrate</h1>
-                        <h3>water your life</h3>
+                        <h1 className='mainTitle'>hydrate</h1>
+                        <h3 className='mainTag'>water your life</h3>
                     </div>
                 </header>
-
-                <Link 
-                    style={{ textDecoration: 'none' }} 
-                    to='/login'>
-                        <button>Login</button>
-                </Link>
-                <Link 
-                    style={{ textDecoration: 'none' }} 
-                    to='/learn'>
-                        <button>Learn</button>
-                </Link>
+                <div className='landingButton'>
+                    <Link 
+                        style={{ textDecoration: 'none' }} 
+                        to='/login'>
+                            <button className='landingButtons'>Login</button>
+                    </Link>
+                    <Link 
+                        style={{ textDecoration: 'none' }} 
+                        to='/learn'>
+                            <button className='landingButtons'>Learn</button>
+                    </Link>
+                </div>
             </div> 
         )
     }

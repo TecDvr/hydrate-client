@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './register.css';
 
 export default class Register extends React.Component {
   constructor(props) {
@@ -29,42 +30,37 @@ export default class Register extends React.Component {
     return (
       <div className='registerPage'>
         <header>
-          <h1>Create User</h1>
+          <h1 className='registerTitle'>Create User</h1>
         </header>
         <form className='registerForm' onSubmit={e => this.handleSubmit(e)}>
-          <div className='registerInput'>
-            <label htmlFor='username'>
-              Username
-            </label>
+          <div>
             <input
+              className='registerInput'
               required
               name='username'
               id='username'
-              placeholder='demoUser'
+              placeholder='Username'
               onChange={e=>this.setState({username:e.target.value})}>
             </input>
-            <label htmlFor='password'>
-              Password
-            </label>
             <input
+              className='registerInput'
               required
               name='password'
               id='password'
-              placeholder='demoPassword'
+              placeholder='Password'
               onChange={e=>this.setState({password:e.target.value})}>
             </input>
-            <label htmlFor='water_goal'>
-              Water Goal
-            </label>
             <input
+              className='registerInput'
               required
               name='uwater_goal'
               id='water_goal'
-              placeholder='8'
+              placeholder='Water goal (1-8)'
               onChange={e=>this.setState({glasses:e.target.value})}>
             </input>
           </div>
-          <button type='submit'>Create User</button>
+          <button className='registerButtons'
+          type='submit'>Create User</button>
         </form>
         </div>
     )

@@ -1,0 +1,32 @@
+.learnPage {
+    height: 400px;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 5vh;
+    margin-right: 10vw;
+    margin-left: 10vw;
+    box-shadow: 3px 3px 10px 1px black;
+}
+
+.learnButtons {
+    height: 60px;
+    width: 120px;
+    background-color: #00B2FF;
+    color: white;
+    font-size: 25px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Orbitron', sans-serif;
+    margin: 10px;
+    margin-top: 60px;
+    box-shadow: 2px 2px 10px 1px black;
+}
+
+.factContainer {
+    padding-top: 20px;
+}
+
+.learnFact {
+    color: #00B2FF;
+    font-family: 'Orbitron', sans-serif;
+}

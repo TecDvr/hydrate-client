@@ -1,5 +1,68 @@
+.userInterface {
+    height: 80vh;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 1vh;
+    margin-right: 5vw;
+    margin-left: 5vw;
+    box-shadow: 3px 3px 10px 1px black;
+}
+
 .gauges {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    background-color: #00B2FF;
+    border-radius: 20px;
+    margin-right: 40px;
+    margin-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 2px 2px 7px 1px black;
+}
+
+.uiTitle {
+    font-family: 'Orbitron', sans-serif;
+    color: #00B2FF;
+    font-size: 15px;
+    margin: 0px;
+    padding-left: 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-align: left;
+}
+
+.weekGoalMet {
+    font-family: 'Orbitron', sans-serif;
+    color: #00B2FF;
+    font-size: 13px;
+}
+
+.waterGoal {
+    background-color: #00B2FF;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.goalText {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.uiButtons {
+    height: 60px;
+    width: 120px;
+    background-color: #00B2FF;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Orbitron', sans-serif;
+    margin: 10px;
+    margin-top: 20px;
+    box-shadow: 2px 2px 10px 1px black;
 }

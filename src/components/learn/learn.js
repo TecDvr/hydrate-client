@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Link } from 'react-router-dom'
+import './learn.css'
 
 export default class Learn extends React.Component {
     constructor(props) {
@@ -24,17 +25,18 @@ export default class Learn extends React.Component {
 
     render() {
         return (
-            <div className='learn one'>
+            <div className='learnPage'>
                 <div>
+                    <div className='factContainer'>
+                        <p className='learnFact'>{this.state.response.fact}</p>
+                    </div>
                     
-                    <p>{this.state.response.id}</p>
-                    <p>{this.state.response.fact}</p>
 
                     <Route
                         exact
                         path='/learn'
                         render={() =>
-                            <Link style={{ textDecoration: 'none' }} to='/learntwo'><button>Next</button></Link>
+                            <Link style={{ textDecoration: 'none' }} to='/learntwo'><button className='learnButtons'>Next</button></Link>
                         }
                     />
                     <Route 
@@ -43,7 +45,7 @@ export default class Learn extends React.Component {
                         render={() =>   
                             <Link 
                                 style={{ textDecoration: 'none' }}to='/user'>
-                                    <button>Create User</button>
+                                    <button className='learnButtons'>Create User</button>
                             </Link>
                         }
                     />

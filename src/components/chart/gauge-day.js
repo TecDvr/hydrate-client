@@ -17,10 +17,6 @@ export default class GaugeDay extends React.Component {
                     ['Today', this.context.amount],
                 ]}
                 options={{
-                    redFrom: 90,
-                    redTo: 100,
-                    yellowFrom: 75,
-                    yellowTo: 90,
                     minorTicks: 2,
                     max: this.context.goal
                 }}
