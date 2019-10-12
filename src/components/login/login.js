@@ -6,11 +6,13 @@ export default class Login extends React.Component {
     super(props);
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      error: null
     }
   }
 
   handleSubmit(event) {
+    this.setState({error:null});
     event.preventDefault();
     window.localStorage.setItem('zachs-token-son',
       window.btoa(`${this.state.username}:${this.state.password}`)
@@ -28,9 +30,10 @@ export default class Login extends React.Component {
           window.localStorage.setItem('userID',user.id)
           this.props.history.push('/ui')
         })
-        : Promise.reject(res)
+        : res.json().then(resJson=>this.setState({error:resJson.error}))
     )
   }
+
 
   render() {
     return (
@@ -60,6 +63,7 @@ export default class Login extends React.Component {
                 onChange={e=>this.setState({password:e.target.value})}>
               </input>
             </div>
+            {this.state.error ? <p className="error">{this.state.error}</p> : ''}
             <button className='loginButtons'            type='submit'>Submit</button>
           </form>
         </div>

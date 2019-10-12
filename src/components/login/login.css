@@ -8,12 +8,17 @@
     border-radius: 10px;
     font-family: 'Orbitron', sans-serif;
     margin: 10px;
-    margin-top: 120px;
+    margin-top: 60px;
     box-shadow: 2px 2px 10px 1px black;
 }
 
+.loginButtons:hover {
+    cursor: pointer;
+    transform: scale(1.2, 1.2);
+}
+
 .loginPage {
-    height: 400px;
+    min-height: 400px;
     background-color: white;
     border-radius: 20px;
     margin-top: 5vh;
@@ -41,5 +46,38 @@
     box-sizing: border-box;
     border: 1px solid #00B2FF;
     border-radius: 10px;
+}
+
+.error {
+    color: red;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Full screen */
+@media only screen and (min-width: 992px) {
+    .loginPage {
+        min-height: 500px;
+        margin-top: 10vh;
+        margin-right: 35vw;
+        margin-left: 35vw;
+    }
+
+    .loginTitle {
+        padding-top: 40px;
+        padding-bottom: 20px;
+        font-size: 40px;
+    }
+
+    .loginInput {
+        padding: 16px 80px;
+        margin: 15px 0;
+    }
+
+    .loginButtons {
+        width: 180px;
+        font-size: 25px;
+        margin-top: 50px;
+    }
 }
 

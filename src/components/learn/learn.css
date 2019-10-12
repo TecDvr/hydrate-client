@@ -1,5 +1,5 @@
 .learnPage {
-    height: 400px;
+    height: 80vh;
     background-color: white;
     border-radius: 20px;
     margin-top: 5vh;
@@ -18,15 +18,73 @@
     border-radius: 10px;
     font-family: 'Orbitron', sans-serif;
     margin: 10px;
-    margin-top: 60px;
     box-shadow: 2px 2px 10px 1px black;
 }
 
+.one {
+    margin-top: 20px;
+}
+
+.two {
+    margin-top: 50px;
+}
+
 .factContainer {
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 .learnFact {
     color: #00B2FF;
     font-family: 'Orbitron', sans-serif;
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 1.25;
+}
+
+.learnTitle {
+    font-family: 'Orbitron', sans-serif;
+    color: #00B2FF;
+    padding-top: 20px;
+}
+
+.learnImg {
+    height: 60px;
+}
+
+/* Full screen */
+@media only screen and (min-width: 992px) {
+    .learnPage {
+        height: 500px;
+        margin-top: 10vh;
+        margin-right: 15vw;
+        margin-left: 15vw;
+    }
+
+    .learnButtons {
+        width: 180px;
+    }
+
+    .one {
+        margin-top: 20px;
+    }
+
+    .two {
+        margin-top: 45px;
+    }
+
+    .learnImg {
+        height: 100px;
+    }
+
+    .learnTitle {
+        font-size: 40px;
+        padding-top: 30px;
+    }
+
+    .learnFact {
+        margin-left: 50px;
+        margin-right: 50px;
+        line-height: 1.25;
+        font-size: 20px;
+    }
 }

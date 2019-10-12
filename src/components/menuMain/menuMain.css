@@ -1,6 +1,6 @@
 #flyoutMenu {
     width: 30vw;
-    height: 30vh;
+    height: 26vh;
     border-right: 2px solid whitesmoke;
     border-bottom-right-radius: 20px;
     background-color: #00B2FF;
@@ -26,11 +26,16 @@
     color: white;
     text-decoration: none;
   }
-   
-  #flyoutMenu h2 a:hover {
-    text-decoration: underline;
-  }
 
   .menuLink {
-    text-align: center;
+    text-align: left;
+    margin-left: 10px;
   }
+
+/* Full screen */
+@media only screen and (min-width: 992px) {
+  #flyoutMenu {
+    width: 10vw;
+    height: 19vh;
+  }
+}

@@ -10,6 +10,7 @@
     font-size: 75px;
     margin: 0;
     font-family: 'Lobster', cursive;
+    margin-top: 10vh;
 }
 
 .mainTag {
@@ -29,6 +30,37 @@
     box-shadow: 2px 2px 10px 1px black;
 }
 
+.one:hover {
+    cursor: pointer;
+    transform: scale(1.2, 1.2);
+}
+
+.two:hover {
+    cursor: pointer;
+    transform: scale(1.2, 1.2);
+}
+
 .landingButton {
-    margin-top: 40vh;
+    margin-top: 30vh;
+}
+
+/* Full screen */
+@media only screen and (min-width: 992px) {
+    .mainTitle {
+        font-size: 150px;
+        margin-top: 15vh;
+    }
+
+    .mainTag {
+        font-size: 30px;
+    }
+
+    .landingButtons {
+        width: 180px;
+        margin: 30px;
+    }
+
+    .landingButton {
+        margin-top: 20vh;
+    }
 }

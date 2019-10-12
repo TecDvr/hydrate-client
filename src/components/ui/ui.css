@@ -1,5 +1,5 @@
 .userInterface {
-    height: 80vh;
+    min-height: 85vh;
     background-color: white;
     border-radius: 20px;
     margin-top: 1vh;
@@ -14,8 +14,8 @@
     justify-content: center;
     background-color: #00B2FF;
     border-radius: 20px;
-    margin-right: 40px;
-    margin-left: 40px;
+    margin-right: 10vw;
+    margin-left: 10vw;
     padding-top: 10px;
     padding-bottom: 10px;
     box-shadow: 2px 2px 7px 1px black;
@@ -36,6 +36,11 @@
     font-family: 'Orbitron', sans-serif;
     color: #00B2FF;
     font-size: 13px;
+}
+
+.weeksAmount {
+    font-weight: bold;
+    color: #266580;
 }
 
 .waterGoal {
@@ -65,4 +70,43 @@
     margin: 10px;
     margin-top: 20px;
     box-shadow: 2px 2px 10px 1px black;
+}
+
+.uiButtons:hover {
+    cursor: pointer;
+    transform: scale(1.2, 1.2);
+}
+
+/* Full screen */
+@media only screen and (min-width: 992px) {
+    .userInterface {
+        height: 80vh;
+        margin-right: 25vw;
+        margin-left: 25vw;
+    }
+
+    .uiButtons {
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-top: 40px;
+    }
+
+    .uiTitle {
+        font-size: 30px;
+        padding-left: 30px;
+        padding-bottom: 30px;
+    }
+
+    .goalText {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .waterGoal {
+        font-size: 30px;
+    }
+
+    .weekGoalMet {
+        font-size: 20px;
+    }
 }

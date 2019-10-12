@@ -22,8 +22,8 @@ class MenuMain extends Component {
           </h2>
           <h2>
             <Link 
-                style={{ textDecoration: 'none' }} 
-                to='/'>Contact</Link>
+              style={{ textDecoration: 'none' }} 
+              to='/'>Contact</Link>
           </h2>
           <h2>
             <Link

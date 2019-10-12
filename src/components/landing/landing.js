@@ -16,12 +16,12 @@ export default class Landing extends React.Component {
                     <Link 
                         style={{ textDecoration: 'none' }} 
                         to='/login'>
-                            <button className='landingButtons'>Login</button>
+                            <button className='landingButtons one'>Login</button>
                     </Link>
                     <Link 
                         style={{ textDecoration: 'none' }} 
                         to='/learn'>
-                            <button className='landingButtons'>Learn</button>
+                            <button className='landingButtons two'>Learn</button>
                     </Link>
                 </div>
             </div> 

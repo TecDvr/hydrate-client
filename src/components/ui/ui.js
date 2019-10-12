@@ -93,7 +93,7 @@ export default class UI extends React.Component {
             {this.state.week.map((weeks, index) => {
               return (
                 <div key={index}>
-                  <p>You drank {weeks.amount} glasses on {weeks.date.slice(0, 10)}</p>
+                  <p>You drank <span className='weeksAmount'>{weeks.amount}</span> glasses on <span className='weeksAmount'>{weeks.date.slice(0, 10)}</span></p>
                 </div>
               )
             })}
