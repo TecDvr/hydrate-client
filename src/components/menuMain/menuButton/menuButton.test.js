@@ -1,14 +1,9 @@
 import React from 'react'; 
 import ReactDOM from 'react-dom';
-import Login from './Login';
-import { BrowserRouter } from 'react-router-dom'
- 
+import MenuButton from './menuButton';
+
 it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(
-        <BrowserRouter>
-            <Login />
-        </BrowserRouter>
-    , div);
+    ReactDOM.render(<MenuButton />, div);
     ReactDOM.unmountComponentAtNode(div);
 })
