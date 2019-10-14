@@ -17,7 +17,7 @@ export default class Login extends React.Component {
     window.localStorage.setItem('zachs-token-son',
       window.btoa(`${this.state.username}:${this.state.password}`)
     )
-    fetch('http://localhost:8000/api/user/login', {
+    fetch('https://powerful-scrubland-63666.herokuapp.com/api/user/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -33,7 +33,6 @@ export default class Login extends React.Component {
         : res.json().then(resJson=>this.setState({error:resJson.error}))
     )
   }
-
 
   render() {
     return (

@@ -13,7 +13,7 @@ export default class Register extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    fetch('http://localhost:8000/api/user', {
+    fetch('https://powerful-scrubland-63666.herokuapp.com/api/user', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

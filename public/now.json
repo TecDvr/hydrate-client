@@ -1,7 +1,7 @@
 {
     "version": 2,
     "alias": "hydrate",
-    "name": "hydrate",
+    "name": "hydrate-app",
     "routes": [
         {
           "src": "^/static/(.*)",

@@ -18,19 +18,19 @@ export default class UI extends React.Component {
   componentDidMount() {
     let userID = window.localStorage.getItem('userID');
     Promise.all([
-      fetch(`http://localhost:8000/api/user/waterconsumed/${userID}`, {
+      fetch(`https://powerful-scrubland-63666.herokuapp.com/api/user/waterconsumed/${userID}`, {
         method: 'GET',
         headers: {
           'authorization': `basic ${window.localStorage.getItem('zachs-token-son')}`
         }
       }),
-      fetch(`http://localhost:8000/api/user/${userID}`, {
+      fetch(`https://powerful-scrubland-63666.herokuapp.com/api/user/${userID}`, {
         method: 'GET',
         headers: {
           'authorization': `basic ${window.localStorage.getItem('zachs-token-son')}`
         }
       }),
-      fetch(`http://localhost:8000/api/user/water/week/${userID}`, {
+      fetch(`https://powerful-scrubland-63666.herokuapp.com/api/user/water/week/${userID}`, {
         method: 'GET',
         headers: {
           'authorization': `basic ${window.localStorage.getItem('zachs-token-son')}`
@@ -53,7 +53,7 @@ export default class UI extends React.Component {
 
   addWater() {
     let userID = window.localStorage.getItem('userID');
-    fetch(`http://localhost:8000/api/user/waterconsumed/${userID}`, {
+    fetch(`https://powerful-scrubland-63666.herokuapp.com/api/user/waterconsumed/${userID}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

@@ -12,7 +12,7 @@ export default class Learn extends React.Component {
 
 //VERSION 2
     // componentDidMount() {
-    //     fetch('http://localhost:8000/api/fact')
+    //     fetch('https://powerful-scrubland-63666.herokuapp.com/api/fact')
     //         .then(response => response.json())
     //         .then(response => {
     //             this.setState({
