@@ -18,7 +18,7 @@
 }
 
 .loginPage {
-    min-height: 400px;
+    min-height: 425px;
     background-color: white;
     border-radius: 20px;
     margin-top: 5vh;
@@ -37,7 +37,7 @@
 
 .loginForm {
     font-family: 'Orbitron', sans-serif;
-    color: #00B2FF; 
+    color: #00B2FF;
 }
 
 .loginInput {
@@ -48,10 +48,20 @@
     border-radius: 10px;
 }
 
+.loginLabel {
+    font-size: 12px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 .error {
     color: red;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.demo {
+    font-size: 12px;
 }
 
 /* Full screen */

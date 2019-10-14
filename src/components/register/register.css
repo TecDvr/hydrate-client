@@ -43,6 +43,14 @@
     border-radius: 10px;
 }
 
+.regLabel {
+    font-size: 12px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'Orbitron', sans-serif;
+    color: #00B2FF;
+}
+
 /* Full screen */
 @media only screen and (min-width: 992px) {
     .registerPage {

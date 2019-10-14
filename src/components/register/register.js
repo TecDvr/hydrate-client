@@ -34,6 +34,7 @@ export default class Register extends React.Component {
         </header>
         <form className='registerForm' onSubmit={e => this.handleSubmit(e)}>
           <div>
+            <label className='regLabel' htmlFor='username'>Username</label>
             <input
               className='registerInput'
               required
@@ -42,6 +43,7 @@ export default class Register extends React.Component {
               placeholder='Username'
               onChange={e=>this.setState({username:e.target.value})}>
             </input>
+            <label className='regLabel' htmlFor='password'>Password</label>
             <input
               className='registerInput'
               required
@@ -50,6 +52,7 @@ export default class Register extends React.Component {
               placeholder='Password'
               onChange={e=>this.setState({password:e.target.value})}>
             </input>
+            <label className='regLabel' htmlFor='water_goal'> Water Goal</label>
             <input
               className='registerInput'
               required

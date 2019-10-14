@@ -75,9 +75,6 @@ export default class App extends React.Component {
             component={UI}
           />
         </main>
-        <footer>
-          
-        </footer>
       </div>
     )
   }

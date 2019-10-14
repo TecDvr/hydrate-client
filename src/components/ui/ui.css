@@ -80,7 +80,7 @@
 /* Full screen */
 @media only screen and (min-width: 992px) {
     .userInterface {
-        height: 80vh;
+        min-height: 80vh;
         margin-right: 25vw;
         margin-left: 25vw;
     }

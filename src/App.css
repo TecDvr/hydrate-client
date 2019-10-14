@@ -5,8 +5,8 @@ font-family: 'Anton', sans-serif;
 font-family: 'Orbitron', sans-serif; */
 
 .appBody {
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    min-width: 100vw;
     background-image: url('https://lh3.googleusercontent.com/JyC0UxDj9mLGokSFgE7RqRIpNznwbXD8VwlpQk3_lyFDi5j-mKlFqZ2eBYzjaW2tdWyhumO3DIICu1vYBL8-alHk9No8sPlppxBrMOIryVBmKyfzA0vLcWRqhzkES4ghgz_hoNQdnorDelxMBJH3jDvnOzW557mH127urNIKjnbfTfSIjW1NesLdFmIpIjjHkKBVLhePrpXijniowZQuz4rbbhn9alk9hOkfUC-4snUBWvbP5ZtPcDNuxJYBZy5LvCwYYNTqYGKBVCn_9atteWhi024Q-NsrAyYMy9DAAEEapLU6ciM7KGGKYMIkL6EIDO3MisBakqtvDe79kfaLei-vPDIW6forK9zadTcZtgJbvYI7vy-GvfepXFCkYpBdp7yxtwBxasljlsfZYd3AkRN-oE7OHQTR24WewjLlo0Px2KXTddIqaeOnS3tqqw10aDvVHywmA3LYy2Wg45M2wif7jGL6OfL2ZAX4dtOH1o3MrCqa9Xnaj3q7wcZg41aTZKVI86tWZBubB1zCkGhM9RsVmYcRhAFD4Jm3UuulHDzKJufPpF0atiWKg0vndD7DQUWMWf63R_gZDApyGV0XL-ts2KCm6QViajrIPCvY-l06nMkD7wMBjhEvAL5Zy3A2czHu5p3vZ7GSM0gdiH9Dnxp4zVlr56JZ9CE7CY7V7xYXkLgnWXQUlo2pMKP9iAUTA7iOtDt6Vwm5qFyPlVY-2JF0GwKonEWLi8IxZ8kemTpeBZW5=w1920-h704-no');
     background-color: white;
     background-repeat: no-repeat;

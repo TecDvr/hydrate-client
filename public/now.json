@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "alias": "hydrate",
+    "name": "hydrate",
+    "routes": [
+        {
+          "src": "^/static/(.*)",
+          "dest": "/static/$1"
+        },
+        {
+          "src": ".*",
+          "dest": "/index.html"
+        }
+    ]
+  }

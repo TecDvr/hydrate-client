@@ -44,6 +44,7 @@ export default class Login extends React.Component {
           </header>
           <form className='loginForm' onSubmit={e => this.handleSubmit(e)}>
             <div>
+              <label className='loginLabel' htmlFor='username'>Username</label>
               <input 
                 className='loginInput'
                 required
@@ -54,6 +55,7 @@ export default class Login extends React.Component {
               </input>
             </div>
             <div>
+              <label className='loginLabel' htmlFor='password'>Password</label>
               <input
                 className='loginInput'
                 required
@@ -63,8 +65,8 @@ export default class Login extends React.Component {
                 onChange={e=>this.setState({password:e.target.value})}>
               </input>
             </div>
-            {this.state.error ? <p className="error">{this.state.error}</p> : ''}
-            <button className='loginButtons'            type='submit'>Submit</button>
+            {this.state.error ? <p className="error">{this.state.error}</p> : <div className='demo'><p>DEMO THIS APP</p><p>username: demoUser</p><p>password: demoPassword</p></div>}
+            <button className='loginButtons' type='submit'>Submit</button>
           </form>
         </div>
       </div>
