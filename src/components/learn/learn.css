@@ -1,5 +1,5 @@
 .learnPage {
-    height: 80vh;
+    min-height: 80vh;
     background-color: white;
     border-radius: 20px;
     margin-top: 5vh;
@@ -54,7 +54,7 @@
 /* Full screen */
 @media only screen and (min-width: 992px) {
     .learnPage {
-        height: 500px;
+        min-height: 500px;
         margin-top: 10vh;
         margin-right: 15vw;
         margin-left: 15vw;

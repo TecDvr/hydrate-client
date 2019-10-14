@@ -23,7 +23,7 @@ class MenuMain extends Component {
           <h2>
             <Link 
               style={{ textDecoration: 'none' }} 
-              to='/'>Contact</Link>
+              to='/contact'>Contact</Link>
           </h2>
           <h2>
             <Link

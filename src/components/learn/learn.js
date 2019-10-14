@@ -10,6 +10,7 @@ export default class Learn extends React.Component {
         }
     }
 
+//VERSION 2
     // componentDidMount() {
     //     fetch('http://localhost:8000/api/fact')
     //         .then(response => response.json())

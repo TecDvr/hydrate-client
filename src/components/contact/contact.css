@@ -1,0 +1,30 @@
+.contactPage {
+    min-height: 20vh;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 5vh;
+    margin-right: 10vw;
+    margin-left: 10vw;
+    box-shadow: 3px 3px 10px 1px black;
+}
+
+.contactTitle {
+    font-family: 'Orbitron', sans-serif;
+    color: #00B2FF;
+    padding-top: 20px;
+}
+
+.contactInfo {
+    font-family: 'Orbitron', sans-serif;
+    color: #00B2FF;
+}
+
+/* Full screen */
+@media only screen and (min-width: 992px) {
+    .learnPage {
+        height: 500px;
+        margin-top: 10vh;
+        margin-right: 15vw;
+        margin-left: 15vw;
+    }
+}

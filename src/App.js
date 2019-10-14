@@ -7,6 +7,7 @@ import Register from './components/register/register';
 import UI from './components/ui/ui';
 import MenuButton from './components/menuMain/menuButton/menuButton'; 
 import MenuMain from './components/menuMain/menuMain'; 
+import Contact from './components/contact/contact';
 import './App.css';
 
 export default class App extends React.Component {
@@ -44,6 +45,12 @@ export default class App extends React.Component {
             path='/' 
             component={Landing}
           />
+
+          <Route
+            exact
+            path='/contact'
+            component={Contact}
+          />  
 
           <Route  
             exact 
