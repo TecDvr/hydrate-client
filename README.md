@@ -1,66 +1,35 @@
-## Hydrate
+# Hydrate
 
-In the project directory, you can run:
+See this app live at: 
 
-### `npm start`
+## Background
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Water is the source of all life. Unfortunetly our daily lives have a habit of distracting us from drinking enough water, which can lead to dehydration. Dehydration may lead to dry skin, wrinkles, poor kidney fucntionality, decrease in physical preformance, and a decrease in cognitive preformance amoung many other adverse effects. 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Hydrate will help you keep track of your water consumption goal and daily intake, making it easy to remember to water your life!
 
-### `npm test`
+### Technologies Used
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Front-End
+* React.js
+* JavaScript
+* HTML5
+* CSS3
 
-### `npm run build`
+#### Back-End
+* Node.js
+* Express.js
+* Bcryptjs
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Description 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Hydrate users are able to set their initial water consumption goal which is based on the number of 8oz glasses of water they would like to consume throughout the day. Once a specific goal is set, users may add or subtract their daily water intake and have a visiual reference of how close to their goal they are. Once a day is complete, users will be able to see a list of their past weeks consumption.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Usage
 
-### `npm run eject`
+* Users register to the application with a unique username and password
+* Users determine their daily water consumption goal based on 8oz glasses of water
+* Users add or subtract the amount of water they have consumed thoughout the day
+* Users have a visual reference of their goal and the amount of water that has been consumed throughout the week
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+![alt text]
