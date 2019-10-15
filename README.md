@@ -16,11 +16,6 @@ Hydrate will help you keep track of your water consumption goal and daily intake
 * HTML5
 * CSS3
 
-#### Back-End
-* Node.js
-* Express.js
-* Bcryptjs
-
 ## Description 
 
 Hydrate users are able to set their initial water consumption goal which is based on the number of 8oz glasses of water they would like to consume throughout the day. Once a specific goal is set, users may add or subtract their daily water intake and have a visiual reference of how close to their goal they are. Once a day is complete, users will be able to see a list of their past weeks consumption.

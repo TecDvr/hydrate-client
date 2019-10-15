@@ -47,7 +47,6 @@ export default class UI extends React.Component {
         date: amount.date,
         week
       })
-      console.log(this.state.week)
     })
   }
 
