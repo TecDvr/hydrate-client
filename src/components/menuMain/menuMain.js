@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import "./menuMain.css";
+import './menuMain.css';
  
 class MenuMain extends Component {
   render() {
@@ -11,7 +11,7 @@ class MenuMain extends Component {
     }
  
     return (
-      <div id="flyoutMenu"
+      <div id='flyoutMenu'
            onMouseDown={this.props.handleMouseDown} 
            className={visibility}>
         <div className='menuLink'>
