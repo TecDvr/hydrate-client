@@ -38,8 +38,8 @@ export default class Learn extends React.Component {
                                 <h1 className='learnTitle'>Do you drink enough water?</h1>
                                 <img className='learnImg' src='https://lh3.googleusercontent.com/JfdHhSMoPa2Ig5jR1lYtJgKQR6sUa_4UpZgzg-cl8fqWUFue9bGX6IOK3eHP1XfpnjV4xJ0RwOjxxFgMoYpHliOlbYsYXSAre3IUVvvNsu4rRXN95h89g6_cUWGrGlzLBFfgQGKGW9R7CvSY80SDm5U_eN_HJ3P5WKF-5TmV7teDSovpTgkw-oJmfDxqJpDdH4QrFXm_qRIdiAQHnt6Kb1PZLXAwMdlzD_POpomgAEROdbqqMFAOxltHF_EXgR3A29XJNntnQd_ItAzC8D7JdyWPM8AnstoLrRd6SqFp1524OkuA190Oshte4bu_iyRksozvk2bc8iQp2cM3Akuyvw-fERNCVxIob7q-ApTkyFG6zZ3GkK396Uf6xtymQnQMHJzFYZjx5wBypezhRMzW3dwC9Yt_ptNlHOZkJUhf8_8k717DhY4R15L2xSMXy0YDc4vjozs3VcQXPbcn1NA4qoTWt4TiM0UXfCYofPZMQDrBC_eZYWxE2q4492phUAeXN2M8OQQbPRvzf3yZmbPb8GoKihI3pRoi8f_jn2ha9nJcQkiYpM-AkYzQ8WWMcQ_bDo-fPgXygl6kUBV93aIPNXLXJLxAIOyl3cqvZl4CAieNEKeFwyIWtMODnz_hjzs4sdgMjccT9ZokL7SNKxk3q6JxTMrJvIAUZ_usKHwjJGWsVy3y9kNn_cS2mZWozelekUfV9sLXdMtIdJHdfr1bpO-sHQgTpy8JcCWDQfa2zL_miU2s=w450-h501-no' alt='water drop'/>
                                 <div className='factContainer'>
-                                    <p className='learnFact'>The human brain is made up of 73% water. Deydration will do nothing but stop those million dollar ideas from flowing from you!</p>
-                                    <p className='learnFact'>It is recommended that the average adult drink 8, 8oz glasses of water a day. That seems like alot to keep track of!</p>
+                                    <p className='learnFact'>The human brain is made up of 73% water. Dehydration will do nothing but stop those million dollar ideas from flowing from you!</p>
+                                    <p className='learnFact'>It is recommended that the average adult drink 8, 8oz glasses of water a day. That seems like a lot to keep track of!</p>
                                 </div>
                                 <Link style={{ textDecoration: 'none' }} to='/learntwo'><button className='learnButtons one'>Next</button></Link>
                             </div>

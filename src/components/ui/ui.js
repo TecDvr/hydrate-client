@@ -2,6 +2,7 @@ import React from 'react';
 import GaugeDay from '../chart/gauge-day';
 import HydrateContext from '../../context/hydrate-context';
 import './ui.css';
+import config from '../../config';
 
 export default class UI extends React.Component {
   constructor(props) {
@@ -18,19 +19,19 @@ export default class UI extends React.Component {
   componentDidMount() {
     let userID = window.localStorage.getItem('userID');
     Promise.all([
-      fetch(`https://powerful-scrubland-63666.herokuapp.com/api/user/waterconsumed/${userID}`, {
+      fetch(`${config.API_ENDPOINT}/user/waterconsumed/${userID}`, {
         method: 'GET',
         headers: {
           'authorization': `basic ${window.localStorage.getItem('zachs-token-son')}`
         }
       }),
-      fetch(`https://powerful-scrubland-63666.herokuapp.com/api/user/${userID}`, {
+      fetch(`${config.API_ENDPOINT}/user/${userID}`, {
         method: 'GET',
         headers: {
           'authorization': `basic ${window.localStorage.getItem('zachs-token-son')}`
         }
       }),
-      fetch(`https://powerful-scrubland-63666.herokuapp.com/api/user/water/week/${userID}`, {
+      fetch(`${config.API_ENDPOINT}/user/water/week/${userID}`, {
         method: 'GET',
         headers: {
           'authorization': `basic ${window.localStorage.getItem('zachs-token-son')}`
@@ -52,7 +53,7 @@ export default class UI extends React.Component {
 
   addWater() {
     let userID = window.localStorage.getItem('userID');
-    fetch(`https://powerful-scrubland-63666.herokuapp.com/api/user/waterconsumed/${userID}`, {
+    fetch(`${config.API_ENDPOINT}/user/waterconsumed/${userID}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

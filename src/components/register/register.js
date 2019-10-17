@@ -1,5 +1,6 @@
 import React from 'react';
 import './register.css';
+import config from '../../config';
 
 export default class Register extends React.Component {
   constructor(props) {
@@ -7,23 +8,28 @@ export default class Register extends React.Component {
     this.state = {
       username: '',
       password: '',
-      glasses: 0
+      glasses: 0,
+      error: null
     }
   }
 
   handleSubmit(event) {
+    this.setState({error:null});
     event.preventDefault();
-    fetch('https://powerful-scrubland-63666.herokuapp.com/api/user', {
+    fetch(`${config.API_ENDPOINT}/user`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(this.state) 
     })
-    .then(response => response.json())
-    .then(responseJSON => {
-      this.props.history.push('/login');
-    })
+    .then(res => 
+      (res.ok)
+        ? res.json().then(user => {
+          this.props.history.push('/login');
+        })
+        : res.json().then(resJson=>this.setState({error:resJson.error}))
+    )
   }
 
   render() {
@@ -47,6 +53,7 @@ export default class Register extends React.Component {
             <input
               className='registerInput'
               required
+              type='password'
               name='password'
               id='password'
               placeholder='Password'
@@ -56,11 +63,15 @@ export default class Register extends React.Component {
             <input
               className='registerInput'
               required
-              name='uwater_goal'
+              type='text'
+              name='water_goal'
               id='water_goal'
-              placeholder='Water goal (1-8)'
+              placeholder='Water goal (1-10)'
               onChange={e=>this.setState({glasses:e.target.value})}>
             </input>
+          </div>
+          <div className='errorBox'>
+            {this.state.error ? <p className="error">{this.state.error}</p> : <p>Please pick between 1 and 10 eight ounce glasses a day</p>}
           </div>
           <button className='registerButtons'
           type='submit'>Create User</button>

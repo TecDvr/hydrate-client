@@ -1,5 +1,6 @@
 import React from 'react';
 import './login.css';
+import config from '../../config';
 
 export default class Login extends React.Component {
   constructor(props) {
@@ -17,7 +18,7 @@ export default class Login extends React.Component {
     window.localStorage.setItem('zachs-token-son',
       window.btoa(`${this.state.username}:${this.state.password}`)
     )
-    fetch('https://powerful-scrubland-63666.herokuapp.com/api/user/login', {
+    fetch(`${config.API_ENDPOINT}/user/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -58,6 +59,7 @@ export default class Login extends React.Component {
               <input
                 className='loginInput'
                 required
+                type='password'
                 name='password'
                 id='password'
                 placeholder='Password'
