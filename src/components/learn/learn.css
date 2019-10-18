@@ -54,7 +54,7 @@
 /* Full screen */
 @media only screen and (min-width: 992px) {
     .learnPage {
-        min-height: 500px;
+        min-height: 550px;
         margin-top: 10vh;
         margin-right: 15vw;
         margin-left: 15vw;

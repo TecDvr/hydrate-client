@@ -1,29 +1,52 @@
 .roundButton {
     background-color: #00B2FF;
-    margin: 20px;
+    margin: 20px 5px 20px 20px;
     width: 40px;
     height: 40px;
     border-radius: 30%;
     border: 5px solid white;
     outline: none;
-    transition: all .2s cubic-bezier(0, 1.26, .8, 1.28);
-    box-shadow: 2px 2px 7px 1px black;
+    /* transition: all .2s cubic-bezier(0, 1.26, .8, 1.28); */
+    /* box-shadow: 2px 2px 7px 1px black; */
   }
    
-.roundButton:hover {
+/* .roundButton:hover {
     background-color: #00B2FF;
     cursor: pointer;
     border-color: #005980;
     transform: scale(1.2, 1.2);
-}
+} */
    
-.roundButton:active {
+/* .roundButton:active {
     border-color: #005980;
     background-color: #FFF;
-}
+} */
 
 .waterDrop {
     height: 20px;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.menuLink {
+    display: flex;
+    flex-direction: row;
+}
+
+.linkText {
+    color: white;
+    margin-right: 10px;
+    margin-top: 26px;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.linkText:hover {
+    transform: scale(1.2, 1.2);
 }
 
 /* Full screen */
@@ -31,5 +54,9 @@
     .roundButton {
         width: 50px;
         height: 50px;
+    }
+
+    .linkText {
+        margin-top: 32px;
     }
 }
