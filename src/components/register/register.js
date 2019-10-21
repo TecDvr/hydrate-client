@@ -1,6 +1,7 @@
 import React from 'react';
 import './register.css';
 import config from '../../config';
+import SMS from '../sms/sms';
 
 export default class Register extends React.Component {
   constructor(props) {
@@ -76,6 +77,7 @@ export default class Register extends React.Component {
           <button className='registerButtons'
           type='submit'>Create User</button>
         </form>
+        <SMS />
         </div>
     )
   }
