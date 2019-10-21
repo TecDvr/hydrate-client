@@ -1,7 +1,6 @@
 import React from 'react';
 import './register.css';
 import config from '../../config';
-import SMS from '../sms/sms';
 
 export default class Register extends React.Component {
   constructor(props) {
@@ -10,26 +9,30 @@ export default class Register extends React.Component {
       username: '',
       password: '',
       glasses: 0,
-      error: null
+      countError: null
     }
   }
 
   handleSubmit(event) {
-    this.setState({error:null});
     event.preventDefault();
-    fetch(`${config.API_ENDPOINT}/user`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(this.state) 
-    })
-    .then(res => 
-      (res.ok)
-        ? res.json().then(user => {
-          this.props.history.push('/login');
-        })
-        : res.json().then(resJson=>this.setState({error:resJson.error}))
+    this.handleFetch();
+  }
+
+  handleFetch() {
+    (this.state.glasses < 1 || this.state.glasses > 10
+      ? this.setState({ countError: true })
+      :
+      fetch(`${config.API_ENDPOINT}/user`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(this.state) 
+      })
+      .then(response => {
+        response.json();
+        this.props.history.push('/login');
+      })
     )
   }
 
@@ -40,7 +43,6 @@ export default class Register extends React.Component {
           <h1 className='registerTitle'>Create User</h1>
         </header>
         <form className='registerForm' onSubmit={e => this.handleSubmit(e)}>
-          <div>
             <label className='regLabel' htmlFor='username'>Username</label>
             <input
               className='registerInput'
@@ -70,14 +72,12 @@ export default class Register extends React.Component {
               placeholder='Water goal (1-10)'
               onChange={e=>this.setState({glasses:e.target.value})}>
             </input>
-          </div>
           <div className='errorBox'>
-            {this.state.error ? <p className="error">{this.state.error}</p> : <p>Please pick between 1 and 10 eight ounce glasses a day</p>}
+            {this.state.countError === true ? <p className="error">Needs to be between 1-10</p> : <p>Please pick between 1 and 10 eight ounce glasses a day</p>}
           </div>
           <button className='registerButtons'
           type='submit'>Create User</button>
         </form>
-        <SMS />
         </div>
     )
   }

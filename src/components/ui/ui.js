@@ -65,11 +65,15 @@ export default class UI extends React.Component {
 
   subtractWaterClick() {
     let newCount = this.state.amount
-    this.setState({
-      amount: newCount - 1
-    }, () => {
-      this.addWater();
-    })
+    if (newCount <= 0) {
+      console.log('You cant drink negavtive amounts of water')
+    } else {
+      this.setState({
+        amount: newCount - 1
+      }, () => {
+        this.addWater();
+      })
+    }
   }
 
   addWaterClick() {
