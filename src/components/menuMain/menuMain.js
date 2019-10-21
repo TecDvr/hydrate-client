@@ -25,6 +25,8 @@ class MenuMain extends Component {
               style={{ textDecoration: 'none' }} 
               to='/contact'>Contact</Link>
           </h2>
+          <p>test</p>
+          
           <h2>
             <Link
               onClick={() => {

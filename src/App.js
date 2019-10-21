@@ -35,9 +35,8 @@ export default class App extends React.Component {
     return (
       <div className='appBody'>
         <header className='headerMain'>
-          <MenuButton handleMouseDown={this.handleMouseDown}/> 
-          <MenuMain handleMouseDown={this.handleMouseDown}
-            menuVisibility={this.state.visible}/>
+          <MenuButton /> 
+          <MenuMain />
         </header>
         <main className='mainDisplay '>
           <Route 
