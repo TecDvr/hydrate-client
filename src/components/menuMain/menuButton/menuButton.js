@@ -5,12 +5,13 @@ import { Link } from 'react-router-dom';
 //VERSION TWO MENU BUTTON
 
 class MenuButton extends Component {
+
   renderLogoutLink() {
     return (
       <div className='menuLink'>
         <Link 
           style={{ textDecoration: 'none' }} 
-          to='/'><p className='linkText'>Home</p>
+          to='/ui'><p className='linkText'>Home</p>
         </Link>
         <Link 
           style={{ textDecoration: 'none' }} 

@@ -1,6 +1,7 @@
 import React from 'react';
 import './login.css';
 import config from '../../config';
+import MenuButton from '../menuMain/menuButton/menuButton';
 
 export default class Login extends React.Component {
   constructor(props) {
@@ -38,7 +39,9 @@ export default class Login extends React.Component {
 
   render() {
     return (
-      <div className='loginPage'>
+      <div>
+        <MenuButton />
+        <div className='loginPage'>
         <div>
           <header className='loginHeader'>
             <h1 className='loginTitle'>Login</h1>
@@ -72,6 +75,8 @@ export default class Login extends React.Component {
           </form>
         </div>
       </div>
+      </div>
+    
     )
   }
 }

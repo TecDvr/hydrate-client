@@ -5,9 +5,8 @@ import Learn from './components/learn/learn';
 import Login from './components/login/login';
 import Register from './components/register/register';
 import UI from './components/ui/ui';
-import MenuButton from './components/menuMain/menuButton/menuButton'; 
-import MenuMain from './components/menuMain/menuMain'; 
 import Contact from './components/contact/contact';
+import PrivateRoute from './components/privateRoute/privateRoute';
 import './App.css';
 
 export default class App extends React.Component {
@@ -29,15 +28,11 @@ export default class App extends React.Component {
     this.setState({ 
         visible: !this.state.visible
     }); 
-  } 
+  }
 
   render() {
     return (
       <div className='appBody'>
-        <header className='headerMain'>
-          <MenuButton /> 
-          <MenuMain />
-        </header>
         <main className='mainDisplay '>
           <Route 
             exact 
@@ -75,7 +70,7 @@ export default class App extends React.Component {
             component={Register}
           />
 
-          <Route
+          <PrivateRoute
             exact
             path='/ui'
             component={UI}

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, Link } from 'react-router-dom'
 import './learn.css'
+import MenuButton from '../menuMain/menuButton/menuButton';
 
 export default class Learn extends React.Component {
     constructor(props) {
@@ -29,6 +30,7 @@ export default class Learn extends React.Component {
     render() {
         return (
             <div>
+                <MenuButton />
                     <Route
                         exact
                         path='/learn'

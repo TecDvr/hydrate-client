@@ -1,6 +1,8 @@
 import React from 'react';
 import './sms.css';
 
+//ADMIN FEATURE VERSION 2
+
 export default class SMS extends React.Component {
     constructor(props) {
         super(props);
@@ -10,12 +12,7 @@ export default class SMS extends React.Component {
         }
     }
 
-    //setInterval
-
     sendText() {
-        let now = new Date()
-        console.log(now)
-
         fetch(`http://localhost:8000/sms?recipient=${this.state.recipient}&sms=${this.state.textmessage}`)
             .catch(e => console.error(e))
     }
