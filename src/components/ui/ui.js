@@ -14,7 +14,8 @@ export default class UI extends React.Component {
       date: null,
       week: [],
       userID: 0,
-      text_me: null
+      text_me: '',
+      phone: ''
     }
   }
 
@@ -49,8 +50,10 @@ export default class UI extends React.Component {
         goal: goal.glasses,
         text_me: goal.text_me,
         date: amount.date,
+        phone: goal.phone,
         week
       })
+      console.log(this.state)
     })
   }
 
@@ -67,8 +70,24 @@ export default class UI extends React.Component {
   }
 
   textMe() {
-    this.setState({text_me: !this.state.text_me})
-    console.log(this.state.text_me)
+    this.setState({text_me: !this.state.text_me
+    }, () => {
+        this.updateTextStatus();
+      });
+      if (this.state.text_me === false) {
+        const message = 'You are now recieiving text message reminders to drink water!'
+
+        fetch(`http://localhost:8000/api/sms?recipient=${this.state.phone}&sms=${message}`)
+        .catch(e => console.error(e))
+      } else {
+        const message = 'You are no longer recieiving text message reminders to drink water!'
+
+        fetch(`http://localhost:8000/api/sms?recipient=${this.state.phone}&sms=${message}`)
+        .catch(e => console.error(e))
+      }
+  }
+
+  updateTextStatus() {
     let userID = window.localStorage.getItem('userID');
     fetch(`${config.API_ENDPOINT}/textme/${userID}`, {
       method: 'PATCH',
@@ -124,10 +143,10 @@ export default class UI extends React.Component {
               <p className='goalText'>Your Goal: {this.state.goal}</p>
               <p className='goalText'>Glasses Consumed: {this.state.amount}</p>
             </div>
-            <div className='textMe'>
+            <div >
               {this.state.text_me === false 
-                ? <p onClick={() => this.textMe()}>Please stop texting me</p> 
-                : <p onClick={() => this.textMe()}>Text me!</p>}
+                ? <div className='textMe'><p className='textInput start' onClick={() => this.textMe()}>Text me!</p><p className='textInfo'>Would you like to recieve text message reminders to help reach your goal?</p></div>
+                : <div className='textMe'><p className='textInput stop' onClick={() => this.textMe()}>Stop!</p><p className='textInfo'>You are currently recieving text message reminders every morning at 9am</p></div>}
             </div>
             <button className='uiButtons' onClick={() => this.addWaterClick()}>Add Water</button>
             <button className='uiButtons' onClick={() => this.subtractWaterClick()}>Subtract Water</button>

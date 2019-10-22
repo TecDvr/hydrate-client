@@ -77,6 +77,40 @@
     transform: scale(1.2, 1.2);
 }
 
+.textMe {
+    display: flex;
+   
+}
+
+.textInput {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    color: white;
+    height: 40px;
+    min-width: 110px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 20px;
+    box-shadow: 2px 2px 7px 1px black;
+}
+
+.textInfo {
+    width: 50vw;
+    font-size: 14px;
+    padding-top: 5px;
+    font-family: 'Orbitron', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.start {
+    background-color: green;
+}
+
+.stop {
+    background-color: red;
+}
+
 /* Full screen */
 @media only screen and (min-width: 992px) {
     .userInterface {
