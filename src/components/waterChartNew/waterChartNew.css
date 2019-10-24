@@ -1,0 +1,32 @@
+.yourGoal {
+    background-color: #0CE0E8;
+    height: 60px;
+    margin-top:10px;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 7px 1px black;
+}
+
+.waterConsumed {
+    background-color:#0DFFC4;
+    height: 60px;
+    margin-top:10px;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 7px 1px black;
+}
+
+.chartContainer {
+   min-height: 100px;
+}
+
+.goalMet {
+    font-size: 30px;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+}
+
+.goalName {
+    padding-top: 20px;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    font-weight: 600;
+}

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './menuMain.css';
+
+// VERSION 2 MENU
  
 class MenuMain extends Component {
   render() {

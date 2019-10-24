@@ -25,6 +25,7 @@ Hydrate users are able to set their initial water consumption goal wh
 * Users register to the application with a unique username and password
 * Users determine their daily water consumption goal based on 8oz glasses of water
 * Users add or subtract the amount of water they have consumed throughout the day
+* User may opt in or out of receiving text message reminders
 * Users have a visual reference of their goal and the amount of water that has been consumed throughout the week
 
 ## Sneak Peak of Hydrate
@@ -58,7 +59,6 @@ Hydrate users are able to set their initial water consumption goal wh
 * Users will be able to edit consumption goals and have more control over the size of glasses drank
 * More secure authentication process
 * UI update including but not limited to display color warnings, chart functionality
-* Text message alerts as to when a glass of water should be consumed. Intervals set by user with consideration to their awake hours
 * Transition animations
 
 ### ENJOY!

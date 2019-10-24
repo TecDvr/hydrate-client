@@ -1,13 +1,18 @@
 import React from 'react'; 
 import ReactDOM from 'react-dom';
-import Contact from './contact';
+import UI from '../ui/ui';
+import PrivateRoute from './privateRoute';
 import { BrowserRouter } from 'react-router-dom';
- 
+
 it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(
     <BrowserRouter>
-        <Contact />
-    </BrowserRouter>, div);
+        <PrivateRoute 
+        exact
+        path='/ui'
+        component={UI}/>
+    </BrowserRouter>
+    , div);
     ReactDOM.unmountComponentAtNode(div);
 })

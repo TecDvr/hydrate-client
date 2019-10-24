@@ -1,13 +1,13 @@
 import React from 'react'; 
 import ReactDOM from 'react-dom';
-import Contact from './contact';
-import { BrowserRouter } from 'react-router-dom';
- 
+import WaterChartNew from './waterChartNew';
+
 it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(
-    <BrowserRouter>
-        <Contact />
-    </BrowserRouter>, div);
+        <WaterChartNew 
+            goal='8'
+            amount='6'/>
+    , div);
     ReactDOM.unmountComponentAtNode(div);
 })

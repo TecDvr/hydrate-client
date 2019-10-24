@@ -1,9 +1,9 @@
 import React from 'react';
-import GaugeDay from '../chart/gauge-day';
 import HydrateContext from '../../context/hydrate-context';
 import './ui.css';
 import config from '../../config';
 import MenuButton from '../menuMain/menuButton/menuButton';
+import WaterChartNew from '../waterChartNew/waterChartNew';
 
 export default class UI extends React.Component {
   constructor(props) {
@@ -52,8 +52,7 @@ export default class UI extends React.Component {
         date: amount.date,
         phone: goal.phone,
         week
-      })
-      console.log(this.state)
+      }, () => console.log(this.state.amount))
     })
   }
 
@@ -77,12 +76,12 @@ export default class UI extends React.Component {
       if (this.state.text_me === false) {
         const message = 'You are now recieiving text message reminders to drink water!'
 
-        fetch(`http://localhost:8000/api/sms?recipient=${this.state.phone}&sms=${message}`)
+        fetch(`${config.API_ENDPOINT}/sms?recipient=${this.state.phone}&sms=${message}`)
         .catch(e => console.error(e))
       } else {
         const message = 'You are no longer recieiving text message reminders to drink water!'
 
-        fetch(`http://localhost:8000/api/sms?recipient=${this.state.phone}&sms=${message}`)
+        fetch(`${config.API_ENDPOINT}/sms?recipient=${this.state.phone}&sms=${message}`)
         .catch(e => console.error(e))
       }
   }
@@ -95,13 +94,12 @@ export default class UI extends React.Component {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(this.state)
-    })
+    }) 
   }
 
   subtractWaterClick() {
     let newCount = this.state.amount
     if (newCount <= 0) {
-      console.log('You cant drink negavtive amounts of water')
     } else {
       this.setState({
         amount: newCount - 1
@@ -113,11 +111,14 @@ export default class UI extends React.Component {
 
   addWaterClick() {
     let newCount = this.state.amount
-    this.setState({
-      amount: newCount + 1
-    }, ()=>{
-      this.addWater();
-    })
+    if (newCount >= this.state.goal) {
+    } else {
+      this.setState({
+        amount: newCount + 1
+      }, ()=>{
+        this.addWater();
+      })
+    }
   }
 
   render() {
@@ -128,7 +129,9 @@ export default class UI extends React.Component {
           <div className='userInterface'>
             <h1 className='uiTitle'>Water Consumed</h1>
             <div className='gauges'>
-              <GaugeDay />
+              <WaterChartNew 
+                goal={this.state.goal}
+                amount={this.state.amount}/>
             </div>
             <div className='weekGoalMet'>
               {this.state.week.map((weeks, index) => {
